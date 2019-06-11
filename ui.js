@@ -1,9 +1,9 @@
 class UI {
   constructor() {
-      this.profile = document.getElementById('movieDisplay');
+      this.display = document.getElementById('movieDisplay');
   }
   displayMovies(movie) {
-      this.profile.innerHTML += `
+      this.display.innerHTML += `
       <div class="card card-body mb-3">
       <div class="row">
         <div class="col-md-3">
@@ -23,9 +23,33 @@ class UI {
   }
   
   movieDisplay() {
-      this.profile.innerHTML = '';
+      this.display.innerHTML = '';
   }
 
-  showAlert() {
+  clearAlert() {
+    //Check for alerts
+    const currentAlert = document.querySelector('.alert-danger');
+    if (currentAlert) {
+      currentAlert.remove();
+    }
+  }
+
+  showAlert(message, className) {
+   // Create div
+   const div = document.createElement('div');
+   // Add class
+   div.className = className;
+   // Append text into div
+   div.appendChild(document.createTextNode(message));
+   // Get parent so we can insert div
+   const container = document.querySelector('.card-body');
+   // Get sibling so we can insert the div before the sibling
+   const searchMovie = document.querySelector('#searchMovie');
+   // Insert the div into the container, before anything else is dynamically generated
+   container.insertBefore(div, searchMovie);
+   // Remove alert after 3 seconds
+   setTimeout(() => {
+     this.clearAlert();
+   }, 3000);
   }
 }
