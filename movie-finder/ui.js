@@ -27,6 +27,5 @@ class UI {
   }
 
   showAlert() {
-    
   }
 }
