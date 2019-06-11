@@ -1,0 +1,10 @@
+.badge {
+    padding: 1em;
+}
+
+.col-md-9 {
+    max-width: 50%;
+    margin-left: 7em;
+    display: flex;
+    flex-direction: column;
+}
