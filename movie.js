@@ -20,7 +20,6 @@ search.addEventListener('keydown', function(){
                 ui. clearAlert();
                 ui.showAlert('No match found, keep searching', 'alert alert-danger'); 
             } else {
-                console.log(movies.Search);
                 for (let i = 0; i < movies.Search.length; i++) {
                     const movie = movies.Search[i];
                     ui.displayMovies(movie);
