@@ -7,10 +7,11 @@ class Omdbapi {
 
   // Fetch movies
   async getMovie(movieTitle) {
-      const moviesResponse = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=7ee80466a9a73a706bb3da43d231787f`);
-      console.log(moviesResponse)
+      const moviesResponse = await fetch(`https://api.themoviedb.org/3/movie/550?api_key=7ee80466a9a73a706bb3da43d231787f`)
       //json returns a promise that resolves with the result of parsing the moviesResponse
       const movies = await moviesResponse.json();
+      console.log(moviesResponse)
+      console.log(movies)
       return movies;
   }
 }
