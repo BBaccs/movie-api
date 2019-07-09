@@ -1,5 +1,5 @@
 const ui = new UI();
-const omd = new Omdbapi();
+const tmd = new Tmd();
 const search = document.querySelector('#searchMovie');
 
 search.addEventListener('keydown', function(){
@@ -13,7 +13,7 @@ search.addEventListener('keydown', function(){
 
     // Display a list of movies if there is something in the input
     if (movieTitle !== '') {
-        omd.getMovie(movieTitle)
+        tmd.getMovie(movieTitle)
         .then(function(movies){
             if (movies.Search === undefined) {
                 // Clear any existing alerts
