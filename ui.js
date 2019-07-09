@@ -9,7 +9,7 @@ class UI {
         <div class="col-md-3">
         <img class="mb-3 mr-3" style="max-width:300px; max-height:300px" src="${movie.Poster}">
           <br>
-          <a href="${movie.Poster}" target="_blank" class="btn btn-primary btn-block mb-4">View Movie</a>
+          <a href="${movie.Poster}" target="_blank" class="btn btn-primary btn-block mb-4">View Poster</a>
         </div>
         <div class="col-md-9">
           <span class="badge badge-primary">Movie Title: ${movie.Title}</span>
